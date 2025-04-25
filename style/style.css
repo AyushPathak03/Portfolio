@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f7f9fb;
+  color: #22223b;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+header {
+  background: #22223b;
+  color: #fff;
+  padding: 0;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px 20px;
+}
+
+header h1 {
+  margin: 0 0 5px 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  color: #b5b5b5;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #f7f9fb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #fd4766;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #22223b;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #fd4766;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skills-list > div {
+  min-width: 180px;
+}
+
+.skills-list ul, .experience ul, .project ul, #certificates ul, #achievements ul, #education ul, .contact-list {
+  list-style: disc inside;
+  padding-left: 0;
+  margin: 0;
+}
+
+.experience, .project {
+  margin-bottom: 20px;
+}
+
+.project-date {
+  font-size: 0.95em;
+  color: #666;
+  font-weight: normal;
+}
+
+.contact-list li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #fd4766;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background: #22223b;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 1rem;
+  margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 20px 10px;
+  }
+  .skills-list {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .container {
+    padding: 25px 8px;
+  }
+  nav {
+    gap: 12px;
+    font-size: 0.9rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+}
