@@ -1,170 +1,151 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ayush Pathak | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="func.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Pathak - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container header-container">
-      <div>
-        <h1>Ayush Pathak</h1>
-        <p class="subtitle">B.Tech CSE Student | Web Developer | Java Enthusiast</p>
-      </div>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#certificates">Certificates</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <!-- Profile Image -->
+            <div class="profile-image">
+                <img src="placeholder.svg" alt="Ayush Pathak" class="avatar">
+            </div>
+            <h1 class="gradient-text">Ayush Pathak</h1>
+            <p>B.Tech CSE Student | Web Developer | Java Enthusiast</p>
+            <div class="social-links">
+                <a href="mailto:varsa4373@gmail.com" class="btn-icon">
+                    <i class="icon-mail"></i>
+                </a>
+                <a href="https://github.com/AyushPathak03" target="_blank" rel="noopener noreferrer" class="btn-icon">
+                    <i class="icon-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/ayushpathak3803" target="_blank" rel="noopener noreferrer" class="btn-icon">
+                    <i class="icon-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <section id="about" class="container">
-    <h2>About Me</h2>
-    <img src=" ">
-    <p>
-      I am a Computer Science and Engineering student at Lovely Professional University, passionate about web development, algorithms, and building impactful software solutions. I have hands-on experience in Java, C++, and full-stack technologies, with a strong foundation in data structures and problem-solving.
-    </p>
-  </section>
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Languages</h3>
+                <ul>
+                    <li>C++</li>
+                    <li>JavaScript</li>
+                    <li>C</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Frameworks</h3>
+                <ul>
+                    <li>HTML and CSS</li>
+                    <li>Bootstrap</li>
+                    <li>Node-JS</li>
+                    <li>React</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Tools/Platforms</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>Operating System</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Soft Skills</h3>
+                <ul>
+                    <li>Problem-Solving Skills</li>
+                    <li>Team Player</li>
+                    <li>Project Management</li>
+                    <li>Adaptability</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 
-  <section id="skills" class="container">
-    <h2>Skills</h2>
-    <div class="skills-list">
-      <div>
-        <h3>Languages</h3>
-        <ul>
-          <li>C++</li>
-          <li>JavaScript</li>
-          <li>C</li>
-          <li>Java</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Frameworks</h3>
-        <ul>
-          <li>HTML & CSS</li>
-          <li>Bootstrap</li>
-          <li>Node.js</li>
-          <li>React</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Tools/Platforms</h3>
-        <ul>
-          <li>MySQL</li>
-          <li>Operating Systems</li>
-        </ul>
-      </div>
-      <div>
-        <h3>Soft Skills</h3>
-        <ul>
-          <li>Problem-Solving</li>
-          <li>Team Player</li>
-          <li>Project Management</li>
-          <li>Adaptability</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>PAI Fitness Analysis</h3>
+                <p class="project-date">April 2024</p>
+                <p>Implemented servlets to handle user requests and manage fitness data interactions.</p>
+                <div class="tech-stack">
+                    <span>Java</span>
+                    <span>MySQL</span>
+                    <span>Servlets</span>
+                    <span>AI</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
 
-  <section id="experience" class="container">
-    <h2>Internship Experience</h2>
-    <div class="experience">
-      <h3>DSA Intern – Java Developer</h3>
-      <span>Board Infinity (June - Aug 2024)</span>
-      <ul>
-        <li>Gained hands-on experience solving complex algorithmic challenges using Java.</li>
-        <li>Enhanced knowledge of core data structures and algorithms through real-world application and mentorship.</li>
-        <li>Tech stacks: Java, Data Structures, Algorithms, Problem Solving.</li>
-      </ul>
-    </div>
-  </section>
+            <div class="project-card">
+                <h3>E-Commerce Product Recommendation System</h3>
+                <p class="project-date">May 2024</p>
+                <p>Implemented recommendation algorithms using collaborative filtering and content-based filtering techniques.</p>
+                <div class="tech-stack">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>MySQL</span>
+                    <span>REST APIs</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
 
-  <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>PAI Fitness Analysis <span class="project-date">April 2024</span></h3>
-      <ul>
-        <li>Implemented servlets to handle user requests and manage fitness data interactions.</li>
-        <li>Designed the front-end using HTML, CSS, and JavaScript for an intuitive UI.</li>
-        <li>Developed APIs to enable smooth communication between the front-end, backend, and database.</li>
-        <li><strong>Tech:</strong> Java, MySQL, Servlets, AI, HTML, CSS, JavaScript</li>
-      </ul>
-    </div>
-    <div class="project">
-      <h3>E-Commerce Product Recommendation System <span class="project-date">May 2024</span></h3>
-      <ul>
-        <li>Implemented recommendation algorithms using collaborative and content-based filtering.</li>
-        <li>Integrated the system with the website using RESTful APIs for real-time updates.</li>
-        <li><strong>Tech:</strong> Java, Spring Boot, MySQL, REST APIs, HTML, CSS, JavaScript</li>
-      </ul>
-    </div>
-    <div class="project">
-      <h3>News Recommended System <span class="project-date">Aug 2023</span></h3>
-      <ul>
-        <li>Implemented recommendation algorithms for personalized news delivery.</li>
-        <li>Integrated with website using RESTful APIs.</li>
-        <li><strong>Tech:</strong> Python, Machine Learning, MySQL, APIs, HTML, CSS, JavaScript</li>
-      </ul>
-    </div>
-  </section>
+            <div class="project-card">
+                <h3>News Recommended System</h3>
+                <p class="project-date">Aug 2023</p>
+                <p>Implemented recommendation algorithms and integrated system with RESTful APIs.</p>
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Machine Learning</span>
+                    <span>MySQL</span>
+                    <span>APIs</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="certificates" class="container">
-    <h2>Certificates</h2>
-    <ul>
-      <li>Cloud Computing (NPTEL) – Mar 2024</li>
-      <li>Meta Android Development – Jan 2023</li>
-      <li>MySQL (Database Management) – Dec 2022</li>
-    </ul>
-  </section>
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+            <a href="tel:+916280609478" class="contact-card">
+                <i class="icon-phone"></i>
+                <span>+91-6280609478</span>
+            </a>
+            <a href="mailto:varsa4373@gmail.com" class="contact-card">
+                <i class="icon-mail"></i>
+                <span>varsa4373@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/ayushpathak3803" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <i class="icon-linkedin"></i>
+                <span>linkedin.com/in/ayushpathak3803</span>
+            </a>
+            <a href="https://github.com/AyushPathak03" target="_blank" rel="noopener noreferrer" class="contact-card">
+                <i class="icon-github"></i>
+                <span>github.com/AyushPathak03</span>
+            </a>
+        </div>
+    </section>
 
-  <section id="achievements" class="container">
-    <h2>Achievements</h2>
-    <ul>
-      <li>Solved over 150 algorithmic challenges on LeetCode.</li>
-      <li>HackerRank: Top 30% of the community, 5-star rating in Algorithms.</li>
-    </ul>
-  </section>
-
-  <section id="education" class="container">
-    <h2>Education</h2>
-    <ul>
-      <li>
-        <strong>Lovely Professional University</strong>, Punjab, India<br>
-        Bachelor of Technology - Computer Science and Engineering (Aug 2026)
-      </li>
-      <li>
-        <strong>ESP High School</strong>, Ludhiana, Punjab<br>
-        Intermediate Percentage: A (March 2020)
-      </li>
-      <li>
-        <strong>Govt Sen Sec School (PAU)</strong>, Ludhiana, Punjab<br>
-        Matriculation; Percentage: 83% (March 2022)
-      </li>
-    </ul>
-  </section>
-
-  <section id="contact" class="container">
-    <h2>Contact</h2>
-    <ul class="contact-list">
-      <li>Email: <a href="mailto:varsa4373@gmail.com">varsa4373@gmail.com</a></li>
-      <li>Mobile: <a href="tel:+916280609478">+91-6280609478</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/in/ayushpathak3803" target="_blank">ayushpathak3803</a></li>
-      <li>GitHub: <a href="https://github.com/AyushPathak03" target="_blank">AyushPathak03</a></li>
-    </ul>
-  </section>
-
-  <footer>
-    <div class="container">
-      &copy; 2025 Ayush Pathak. All rights reserved.
-    </div>
-  </footer>
+    <script src="script.js"></script>
 </body>
 </html>
