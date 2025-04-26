@@ -1,85 +1,58 @@
-// Scroll to Top Button
-const scrollBtn = document.createElement('button');
-scrollBtn.id = "scrollTopBtn";
-scrollBtn.innerText = "↑";
-scrollBtn.title = "Scroll to Top";
-document.body.appendChild(scrollBtn);
 
-scrollBtn.style.position = "fixed";
-scrollBtn.style.bottom = "30px";
-scrollBtn.style.right = "30px";
-scrollBtn.style.display = "none";
-scrollBtn.style.padding = "12px 16px";
-scrollBtn.style.borderRadius = "50%";
-scrollBtn.style.background = "#fd4766";
-scrollBtn.style.color = "#fff";
-scrollBtn.style.border = "none";
-scrollBtn.style.fontSize = "1.2rem";
-scrollBtn.style.cursor = "pointer";
-scrollBtn.style.zIndex = "1000";
-scrollBtn.style.boxShadow = "0 2px 8px rgba(0,0,0,0.15)";
+document.addEventListener('DOMContentLoaded', () => {
+    // 3D Tilt Effect for Hero Section
+    const hero = document.querySelector('.hero-content');
+    
+    document.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        const x = (clientX / window.innerWidth - 0.5) * 20;
+        const y = (clientY / window.innerHeight - 0.5) * 20;
+        
+        hero.style.transform = `perspective(1000px) rotateX(${-y}deg) rotateY(${x}deg)`;
+    });
+    
+    // Reset transform when mouse leaves
+    document.addEventListener('mouseleave', () => {
+        hero.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
+    });
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-});
+    // Smooth Scrolling for Navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const target = document.querySelector(targetId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 
-scrollBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+    // Fade-in Animation on Scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
 
-// Fade-in Animation for Sections
-const sections = document.querySelectorAll('section');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
-    }
-  });
-}, { threshold: 0.15 });
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
 
-sections.forEach(section => observer.observe(section));
-
-// Responsive Navigation Toggle (for mobile)
-const nav = document.querySelector('nav');
-const navToggle = document.createElement('button');
-navToggle.id = "navToggle";
-navToggle.innerHTML = "☰";
-navToggle.style.display = "none";
-navToggle.style.background = "none";
-navToggle.style.border = "none";
-navToggle.style.fontSize = "2rem";
-navToggle.style.color = "#fd4766";
-navToggle.style.cursor = "pointer";
-navToggle.style.marginLeft = "auto";
-nav.parentNode.insertBefore(navToggle, nav);
-
-function handleResize() {
-  if (window.innerWidth < 700) {
-    nav.style.display = "none";
-    navToggle.style.display = "block";
-  } else {
-    nav.style.display = "flex";
-    navToggle.style.display = "none";
-  }
-}
-window.addEventListener('resize', handleResize);
-handleResize();
-
-navToggle.addEventListener('click', () => {
-  if (nav.style.display === "none" || nav.style.display === "") {
-    nav.style.display = "flex";
-    nav.style.flexDirection = "column";
-    nav.style.background = "#22223b";
-    nav.style.position = "absolute";
-    nav.style.top = "70px";
-    nav.style.right = "0";
-    nav.style.width = "100%";
-    nav.style.padding = "20px 0";
-  } else {
-    nav.style.display = "none";
-  }
+    // Apply fade-in animation to sections
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(section);
+    });
 });
